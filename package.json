@@ -1,0 +1,19 @@
+{
+  "name": "promptcraft",
+  "version": "1.0.0",
+  "description": "PromptCraft - Advanced Prompt Engineering & Generative AI Experimentation Platform",
+  "main": "app.js",
+  "scripts": {
+    "build": "node build-config.js",
+    "setup": "node build-config.js",
+    "vercel-build": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}

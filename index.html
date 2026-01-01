@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptCraft - Prompt Engineering & Generative AI Lab</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="logo-icon">✨</span> PromptCraft</h1>
+            <p class="subtitle">Advanced Prompt Engineering & Generative AI Experimentation Platform</p>
+        </header>
+
+        <div class="main-content">
+            <div class="question-section">
+                <div class="input-container">
+                    <textarea 
+                        id="questionInput" 
+                        placeholder="Enter your prompt here... Experiment with different prompt engineering techniques!"
+                        rows="3"
+                    ></textarea>
+                    <button id="askButton" class="primary-btn">Generate Response</button>
+                </div>
+
+                <div class="navigation-controls">
+                    <button id="prevButton" class="nav-btn" disabled>← Previous</button>
+                    <span id="questionCounter" class="counter">Prompt 0 of 0</span>
+                    <button id="nextButton" class="nav-btn" disabled>Next →</button>
+                </div>
+            </div>
+
+            <div class="display-section">
+                <div class="question-display" id="questionDisplay">
+                    <h3>Your Prompt:</h3>
+                    <p class="question-text">No prompt selected</p>
+                </div>
+
+                <div class="answer-display" id="answerDisplay">
+                    <h3>AI Response:</h3>
+                    <div class="answer-text" id="answerText">
+                        <p>Enter a prompt to see the AI's response!</p>
+                    </div>
+                </div>
+
+                <div class="loading" id="loadingIndicator" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Generating response...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h3>Prompt History</h3>
+            <div id="historyList" class="history-list">
+                <p class="empty-history">No prompts submitted yet</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load configuration file first (contains API key from .env) -->
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
