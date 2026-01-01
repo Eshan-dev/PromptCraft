@@ -96,9 +96,12 @@ class PromptLinkedList {
 
 // API Key is loaded from config.js file (generated from .env)
 // Make sure config.js exists - run: npm run build (or node build-config.js)
-const GEMINI_API_KEY = "AIzaSyBKPfvFjlO8E0PMAu75KHa_KrfWnRlWebE"
+const GEMINI_API_KEY = (typeof CONFIG !== 'undefined' && CONFIG.GEMINI_API_KEY) 
+    ? CONFIG.GEMINI_API_KEY 
+    : null;
 // Initialize the prompt history linked list
 const promptList = new PromptLinkedList();
+// console.log(process.env.API_KEY?.slice(-4))
 
 // DOM Elements
 const questionInput = document.getElementById('questionInput');
